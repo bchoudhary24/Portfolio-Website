@@ -1,0 +1,82 @@
+            .home {
+                /* background: linear-gradient(120deg, #13484c, #ffffff);*/
+                /*background: linear-gradient(to right, #e0f7fa, #b2ebf2);*/
+                background: linear-gradient(to right, #f4a0bd, #9a415f);
+                min-height: 90vh;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                text-align: center;
+                padding: 2rem;
+                flex-wrap: wrap;
+                position: relative;
+            }
+            
+            .intro h1 {
+                font-size: 70px;
+                color: #e8e5e5;
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            }
+            
+            .intro span {
+                color: #000000;
+                font-weight: 500;
+                font-family: "poppins"
+            }
+            
+            .intro p {
+                font-size: 1.2rem;
+                margin: 15px 0;
+                color: #555;
+            }
+            
+            .intro button {
+                padding: 5px 20px;
+                font-size: 1.3rem;
+                background-color: #155f5f;
+                color: rgb(181, 38, 134);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                border-color: 2px rgb(17, 17, 17);
+                background-color: #ffffff;
+                transition: background-color 0.3s;
+            }
+            
+            .intro button:hover {
+                background-color: #272626;
+                color: solid white;
+            }
+            
+            .resume {
+                display: inline-block;
+                margin-top: 15px;
+                padding: 10px 20px;
+                background-color: #ffffff;
+                color: rgb(181, 38, 134);
+                text-decoration: none;
+                border-radius: 6px;
+                font-weight: 500;
+            }
+            
+            .resume:hover {
+                background-color: #2a2a2a;
+                color: solid black;
+            }
+            
+            .profile-img {
+                flex: 1;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                min-width: 280px;
+                padding: 1rem;
+            }
+            
+            .profile-img img {
+                width: 270px;
+                height: auto;
+                border-radius: 50%;
+                box-shadow: 0 54px 35px rgba(2, 52, 55, 0.2);
+                object-fit: cover;
+            }
