@@ -1,11 +1,13 @@
 import React from 'react';
 import './About.css';
 import profileImage from '../assets/about.png.jpg'; // ✅ correct import from assets
-
+import { Link } from 'react-router-dom';
 const About = () => {
   return (
+      
     <section className="about-section" id="about">
       <h2>About Me</h2>
+  
       <div className="about-container">
         <div className="about-image">
           <img src={profileImage} alt="Bhumika Choudhary" />
@@ -35,9 +37,12 @@ const About = () => {
             >
               Visit my LinkedIn
             </a>
-            <a href="/certificates" className="btn secondary">
+            <Link to="/certificates" className="btn secondary">
               View Certificates
-            </a>
+            </Link>
+            <Link to="/Internships" className='btn secondary'>
+            View Internships
+            </Link>
           </div>
         </div>
       </div>
