@@ -4,7 +4,7 @@ import './Contact.css';
 const Contact = () => {
   return (
     <section className="contact-section" id="contact">
-      <h2>Contact Me</h2>
+      <h2>Hire Me/h2>
       <form 
         className="contact-form"
         action="https://formsubmit.co/cbhumika199@gmail.com" 
@@ -21,3 +21,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
