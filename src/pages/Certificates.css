@@ -2,7 +2,7 @@
     text-align: center;
     padding: 3rem 1rem;
     color: #0d1b2a;
-    background: linear-gradient(-45deg, #001831, #2c3e70, #a7a6a6, #012981);
+    background: linear-gradient(-45deg, #04284e, #2c3e70, #ff3030, #012981);
     background-size: 400% 400%;
     animation: gradientMotion 6s cubic-bezier(0, 0.86, 0.58, 1) infinite;
 }
