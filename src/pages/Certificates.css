@@ -1,0 +1,89 @@
+.certificates-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #0d1b2a;
+    background: linear-gradient(-45deg, #001831, #2c3e70, #a7a6a6, #012981);
+    background-size: 400% 400%;
+    animation: gradientMotion 6s cubic-bezier(0, 0.86, 0.58, 1) infinite;
+}
+
+.certificates-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #1a3c7b;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+
+/* Certificate Card */
+
+.certificate-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    animation: slideUp 0.8s ease forwards;
+    opacity: 0;
+}
+
+.certificate-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #1a3c7b;
+}
+
+.certificate-card p {
+    padding: 1rem;
+    font-weight: 600;
+    color: #1a3c7b;
+}
+
+
+/* Hover Lighting Effect */
+
+.certificate-card::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 123, 255, 0.3), transparent 70%);
+    transform: scale(0);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.certificate-card:hover::before {
+    transform: scale(1);
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0, 123, 255, 0.4);
+}
+
+
+/* Slide-up animation on scroll */
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

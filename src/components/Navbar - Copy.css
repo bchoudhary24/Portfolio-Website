@@ -1,0 +1,218 @@
+/* 🔹 Full Height for background motion */
+
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+/* 🔹 Background Gradient Motion */
+
+body {
+    background: linear-gradient(-45deg, #1a1a40, #2d2f7f, #1e90ff, #001360);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* 🔹 Navbar */
+
+.navbar {
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgb(255, 255, 255);
+    transition: background 0.6s ease-in-out;
+    background: linear-gradient(-45deg, #001831, #2c3e70, #a7a6a6, #012981);
+    background-size: 400% 400%;
+    animation: gradientMotion 6s cubic-bezier(0, 0.86, 0.58, 1) infinite;
+}
+
+.navbar:hover {
+    background: rgba(147, 147, 147, 0.958);
+}
+
+
+/* 🔹 Logo */
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* 🔹 Desktop Links (3D Buttons) */
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    position: relative;
+    padding: 12px 28px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 14px;
+    text-decoration: none;
+    overflow: hidden;
+    background: linear-gradient(145deg, #012d58, #368def);
+    box-shadow: 0 6px 0 #3b77b3, 0 8px 20px rgba(0, 0, 0, 0.873);
+    transition: all 0.25s ease-in-out;
+}
+
+
+/* Patli shine line (hidden by default) */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -120%;
+    width: 40px;
+    height: 200%;
+    background: linear-gradient( 120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%);
+    transform: rotate(20deg);
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* Shine run only when button is clicked */
+
+.nav-links a:active::after {
+    animation: thinShine 0.9s ease-out forwards;
+    opacity: 1;
+}
+
+@keyframes thinShine {
+    0% {
+        left: -120%;
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    50% {
+        left: 40%;
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.6;
+    }
+    100% {
+        left: 130%;
+        opacity: 0;
+    }
+}
+
+
+/* Hover effect (without shine) */
+
+.nav-links a:hover {
+    background: linear-gradient(145deg, #3399ff, #1e90ff);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 0 #0d47a1, 0 12px 22px rgba(30, 144, 255, 0.5);
+}
+
+
+/* Press depth effect */
+
+.nav-links a:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 0 #0d47a1, 0 6px 12px rgba(30, 144, 255, 0.4);
+}
+
+
+/* 🔹 Mobile Menu */
+
+.mobile-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+    text-align: center;
+    z-index: 999;
+}
+
+.mobile-menu a {
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 0;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(145deg, #1e90ff, #1a75d2);
+    box-shadow: 0 6px 0 #1558a8, 0 8px 20px rgba(30, 144, 255, 0.4);
+    transition: all 0.25s ease-in-out;
+}
+
+.mobile-menu a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient( 120deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.2) 60%, transparent 100%);
+    transform: skewX(-25deg);
+}
+
+.mobile-menu a:hover::before {
+    left: 130%;
+    transition: left 0.8s ease;
+}
+
+.mobile-menu a:hover {
+    background: linear-gradient(145deg, #3399ff, #1e90ff);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 0 #1558a8, 0 12px 25px rgba(30, 144, 255, 0.6);
+}
+
+.mobile-menu a:active {
+    transform: translateY(3px);
+    box-shadow: 0 3px 0 #1558a8, 0 4px 12px rgba(30, 144, 255, 0.4);
+}
+
+
+/* 🔹 Responsive */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+}

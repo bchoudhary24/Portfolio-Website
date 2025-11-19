@@ -1,0 +1,118 @@
+.home {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+    /* 🔥 Gradient Animation */
+    background: linear-gradient(-45deg, #001831, #2c3e70, #a7a6a6, #012981);
+    background-size: 400% 400%;
+    animation: gradientMotion 6s cubic-bezier(0, 0.86, 0.58, 1) infinite;
+}
+
+@keyframes gradientMotion {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* Floating background */
+
+.floating-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    color: #000;
+}
+
+.circle {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #001831;
+}
+
+
+/* Intro section */
+
+.intro {
+    z-index: 2;
+    max-width: 600px;
+}
+
+.intro h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.hi-text {
+    color: #b5b5b5;
+    font-size: 55px;
+    font-family: Impact, Haettenschweiler, Arial Narrow Bold, sans-serif;
+    /* orange */
+}
+
+.name-text {
+    color: #c2cbde;
+    font-size: 47px;
+    font-family: poppins;
+    /* dark blue */
+}
+
+.intro p {
+    font-size: 1.1rem;
+    margin: 10px 0 20px;
+    color: #ddd;
+}
+
+
+/* Resume button */
+
+.glow-btn {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 15px;
+    background: linear-gradient(90deg, #d3d3d3, #010640);
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(216, 216, 218, 0.6);
+    transition: 0.3s ease;
+}
+
+.glow-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(160, 160, 202, 0.9);
+}
+
+
+/* Profile image */
+
+.profile-img {
+    z-index: 2;
+}
+
+.profile-img img {
+    width: 290px;
+    height: 490px;
+    border-radius: 49%;
+    border: 2px solid #c4c4c4;
+    box-shadow: 0 0 25px rgba(30, 60, 114, 0.5);
+}

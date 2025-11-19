@@ -1,0 +1,148 @@
+/* ========== GLOBAL STYLES ========== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* Container default */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* Headings */
+
+h1,
+h2,
+h3 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+
+/* Grid system */
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+
+/* Cards */
+
+.card {
+    background: #fafafa;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* Images */
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/* Navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #111;
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #ff9800;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+
+/* ========== RESPONSIVE BREAKPOINTS ========== */
+
+
+/* Tablets */
+
+@media (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .navbar ul {
+        gap: 1rem;
+    }
+}
+
+
+/* Mobiles */
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    }
+}

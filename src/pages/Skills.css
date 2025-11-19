@@ -1,0 +1,134 @@
+.skills-section {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(-45deg, #001831, #2c3e70, #ffffff, #3a5ba0);
+    background-size: 400% 400%;
+    animation: gradientMotion 15s cubic-bezier(0, 0.86, 0.58, 1) infinite;
+}
+
+.skills-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+
+/* Category Section (Frontend / Backend / Database) */
+
+.skills-category {
+    margin-bottom: 2.5rem;
+}
+
+.skills-category h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #000411;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideDown 1s ease forwards;
+    /* 👈 ab sirf ek hi baar chalega */
+}
+
+
+/* Slide Down Animation (ek hi baar run karega) */
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Shine Effect (sirf overlay hoga, heading stable rahegi) */
+
+.skills-category h3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transform: skewX(-25deg);
+    animation: shineHeading 3s linear infinite;
+}
+
+
+/* Shine ke liye overlay bar move karega */
+
+@keyframes shineHeading {
+    0% {
+        left: -80%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+
+/* Grid */
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+/* Skill Cards */
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+/* Card Icons */
+
+.skill-card .icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: #042475;
+}
+
+.skill-card .name {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+
+/* Shine on Hover */
+
+.skill-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: skewX(-25deg);
+    transition: 0.5s;
+}
+
+.skill-card:hover::after {
+    left: 100%;
+}

@@ -1,0 +1,103 @@
+.internships-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #e3f2fd, #ffffff);
+    color: #0d1b2a;
+}
+
+.internships-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    color: #032046;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.internships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+/* Internship Card */
+
+.internships-card {
+    position: relative;
+    max-width: 350px;
+    /* 👈 Ab card ka size limited */
+    margin: 0 auto;
+    /* 👈 Center me rahega */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 162, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    animation: fadeInScale 1s ease forwards;
+    opacity: 0;
+}
+
+.internships-card img {
+    width: 100%;
+    height: 200px;
+    /* 👈 Height kam ki */
+    object-fit: cover;
+    border-bottom: 2px solid rgba(0, 162, 255, 0.6);
+}
+
+.internships-card p {
+    padding: 0.8rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    /* 👈 Font thoda small */
+    color: #004aad;
+    z-index: 2;
+    position: relative;
+}
+
+
+/* Neon Glow Border Effect */
+
+.internships-card::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00a2ff, #0077ff, #00f0ff, #007bff);
+    border-radius: 22px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.internships-card:hover::before {
+    opacity: 1;
+}
+
+
+/* Hover Tilt + Glow */
+
+.internships-card:hover {
+    transform: rotate3d(1, 1, 0, 8deg) scale(1.03);
+    box-shadow: 0 15px 40px rgba(0, 162, 255, 0.4);
+}
+
+
+/* Animation */
+
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

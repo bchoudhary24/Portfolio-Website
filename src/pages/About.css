@@ -1,0 +1,131 @@
+.about-section {
+    padding: 80px 40px;
+    color: #333;
+    text-align: center;
+    background: linear-gradient(-45deg, #001831, #2c3e70, #ffffff, #3a5ba0);
+    background-size: 400% 400%;
+    animation: gradientMotion 15s cubic-bezier(0, 0.86, 0.58, 1) infinite;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #ffffff;
+    font-family: emoji;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image img {
+    width: 260px;
+    height: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    max-width: 900px;
+    font-size: 19px;
+    line-height: 1.8;
+    text-align: left;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+}
+
+.about-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+/* 🔥 Stylish Button with Shine + Glow */
+
+.btn {
+    position: relative;
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(90deg, #01174f, #2c3e70);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Shine bar effect */
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient( 120deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.6) 60%, transparent 100%);
+    transform: skewX(-25deg);
+}
+
+
+/* Animate shine when hover */
+
+.btn:hover::before {
+    animation: shineMove 0.8s ease forwards;
+}
+
+@keyframes shineMove {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 125%;
+    }
+}
+
+
+/* Hover glow + scale */
+
+.btn:hover {
+    background: linear-gradient(90deg, #2c3e70, #3a5ba0);
+    color: #ffffff;
+    box-shadow: 0 0 15px #3a5ba0, 0 0 30px #2c3e70;
+    transform: scale(1.05);
+}
+
+
+/* Secondary button */
+
+.btn.secondary {
+    background: linear-gradient(90deg, #010c45, #2c3e70);
+}
+
+.btn.secondary:hover {
+    background: linear-gradient(90deg, #2c3e70, #3a5ba0);
+    color: #fff;
+    box-shadow: 0 0 15px #3a5ba0, 0 0 30px #2c3e70;
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .about-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+    }
+    .about-image {
+        margin-right: 40px;
+    }
+}
